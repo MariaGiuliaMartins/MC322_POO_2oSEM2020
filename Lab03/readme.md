@@ -84,7 +84,7 @@ Herdeira de Grupo e visível para todos os usuários.
 #### Estrutura da classe GrupoPublico
 ##### Atributos
 - mesmos de Grupo
-- _membros_: ArrayList<Usuario>
+- _membros_: ArrayList< Usuario>
 ##### Funções
 - _toString_: String
 - _adicionaMembro(Usuario)_
@@ -95,7 +95,7 @@ Herdeira de Grupo e não é visível para todos.
 #### Estrutura da classe GrupoPrivado
 ##### Atributos
 - mesmos de Grupo
-- _membros_: ArrayList<Usuario>
+- _membros_: ArrayList< Usuario>
 ##### Funções
 - _toString_: String
 - _adicionaMembro(Usuario)_
