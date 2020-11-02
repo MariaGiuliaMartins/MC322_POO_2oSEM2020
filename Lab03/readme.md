@@ -18,6 +18,8 @@ Responsável por armazenar os dados únicos de acesso do usuário ao sistema.
 - _satus_: boolean
 ##### Funções
 - _toString_: String
+- _criarGrupo()_
+- _removerGrupo()_
 
 ### Classe Perfil
 Responsável por armazenar os dados que caracterizam o perfil de um usuário do sistema.
@@ -61,7 +63,7 @@ Responsável por armazenar os dados que caracterizam o perfil de um usuário do 
 - _invitationOnly_:  boolean
 - _dataCriacao_: GregorianCalendar
 ##### Funções
-- _toString()_: String
+- _toString_: String
 - _getNumeroCartoes()_: static int
 
 ### Classe Grupo
@@ -82,7 +84,7 @@ Herdeira de Grupo e visível para todos os usuários.
 #### Estrutura da classe GrupoPublico
 ##### Atributos
 - mesmos de Grupo
-- _membros[]_: Usuario
+- _membros_[]: Usuario
 ##### Funções
 - _toString_: String
 - _adicionaMembro(Usuario)_
@@ -93,7 +95,7 @@ Herdeira de Grupo e não é visível para todos.
 #### Estrutura da classe GrupoPrivado
 ##### Atributos
 - mesmos de Grupo
-- _membros[]_: Usuario
+- _membros_[]: Usuario
 ##### Funções
 - _toString_: String
 - _adicionaMembro(Usuario)_
