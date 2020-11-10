@@ -1,7 +1,7 @@
 # Lab03 - Classes com atributos *final*, uso de *ArrayList* e Herança
 
 ## Objetivo
-Familiarização a construção de classes que possuam atributosfinal, além do uso de ArrayList e Herança.
+Familiarização a construção de classes que possuam atributos *final*, além do uso de *ArrayList* e Herança.
 
 ## Atividade
 Continuação do laboratório anterior adicionando novas classes: Grupo, GrupoPublico, GrupoPrivado e Admin.
@@ -14,12 +14,13 @@ Responsável por armazenar os dados únicos de acesso do usuário ao sistema.
 - _login_: String
 - _email_: String
 - _senha_: String
+- _descricao_ : String
 - _dataAtavacao_ : GregorianCalendar
 - _satus_: boolean
 ##### Funções
 - _toString_: String
-- _criarGrupo()_
-- _removerGrupo()_
+- _criarGrupo(String, String, boolean)_
+- _removerGrupo(Grupo)_
 
 ### Classe Perfil
 Responsável por armazenar os dados que caracterizam o perfil de um usuário do sistema.
@@ -74,6 +75,7 @@ Classe mãe de GrupoPublico e GrupoPrivado.
 - _nome_: String
 - _descricao_: String
 - _dono_: final Usuario
+- _membros_: ArrayList<Usuario>
 - _satus_: boolean
 - _dataCriacao_ : GregorianCalendar
 ##### Funções
@@ -84,7 +86,6 @@ Herdeira de Grupo e visível para todos os usuários.
 #### Estrutura da classe GrupoPublico
 ##### Atributos
 - mesmos de Grupo
-- _membros_: ArrayList< Usuario>
 ##### Funções
 - _toString_: String
 - _adicionaMembro(Usuario)_
@@ -95,11 +96,10 @@ Herdeira de Grupo e não é visível para todos.
 #### Estrutura da classe GrupoPrivado
 ##### Atributos
 - mesmos de Grupo
-- _membros_: ArrayList< Usuario>
 ##### Funções
 - _toString_: String
-- _adicionaMembro(Usuario)_
-- _removeMembro(Usuario)_
+- _adicionaMembro(Usuario, Usuario)_
+- _removeMembro(Usuario, Usuario)_
 
 ### Classe Admin
 Herdeira de Usuario que pode desabilitar grupos.
@@ -107,7 +107,7 @@ Herdeira de Usuario que pode desabilitar grupos.
 ##### Atributos
 - mesmos de Usuario
 ##### Funções
-- _desabilitarGrupo()_
+- _desabilitarGrupo(Grupo)_
 
 ## Classe Main
 ### Classe Usuario
